@@ -1,0 +1,197 @@
+
+/* Apply colors */
+body {
+    background-color: #ebebeb; 
+    color: #282829;
+    font-family: "Roboto", sans-serif; /* Use Google Fonts for body text */
+  }
+  
+  /* CSS Variables & Fallbacks */
+  :root {
+    --main-color: rgb(78, 76, 76); /* grey color variable */
+    --text-color: black; /* text color variable */
+  }
+  
+  /* Background */
+  header {
+    background-color: #ebebeb; 
+    border:3px groove rgb(150, 158, 163);
+  }
+  
+  /* Units */
+  main {
+    font-size: 1rem; /* Relative unit: rem */
+    width: 30vw; /* Relative unit: vw */
+    height: auto;
+    max-width: 1200px; /* Maximum width */
+    min-width: 200px; /* Minimum width */
+    display: grid;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  /* Box Model */
+  section {
+    width: 700px;
+    margin: 10px 10px 10px 300px;
+    border-width: 10px ;
+    border-color: #ccc;
+    border-style: double;
+    border-radius: 80px; /* Rounded corners */
+    display: grid;
+    position: static;
+  }
+  
+  /* Text */
+  h1{
+    font-family:"Jersey 15", sans-serif;
+    text-align: center; /* Center headings */
+  }
+  h2 {
+    font-family:"Roboto", sans-serif;
+    color: rgb(43, 44, 45);
+    text-decoration: underline;
+    text-align: center; /* Center headings */
+  }
+  
+  /* Selector List */
+  h3, h4 {
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    text-decoration: dashed;
+    color: var(--main-color); /* Use CSS variable for text color */
+    text-align: center; /* Center headings */
+  }
+  
+  
+  /* Sizing */
+  img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+  }
+  
+  /* Position */
+  footer {
+    position: fixed; /* Fixed positioning for footer */
+    bottom: 0; /* Stick to the bottom of the viewport */
+    width: 100%; /* Full width */
+    background-color: #747272; /* Dark background for footer */
+    color: #fff; /* White text */
+    text-align: center; /* Center text */
+    height: 40px;
+    margin: auto;
+  }
+  /* Attribute selector*/
+  a[href] {
+    color: #007bff; /* Blue color for links */
+  }
+
+  /* Pseudo-class */
+  a:hover {
+    text-decoration: none; /* Remove underline on hover for links */
+    color: #0056b3; /* Darker blue color on hover */
+  }
+  section:hover {
+    background-color: #959595; /* Change background color when hovered */
+    color: #ffffff; /* Change text color when hovered */
+  }
+  section:active {
+    background-color: #95cbde; /* Change background color when clicked */
+    color: #ffffff; /* Change text color when clicked */
+  }
+  
+  
+  /* Flexbox */
+  nav ul {
+    display: flex; /* Use flexbox for navigation */
+    justify-content: space-around; /* Space out navigation items */
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  
+  /* Responsiveness */
+  @media screen and (max-width: 768px) {
+    main {
+      grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+  }
+  
+  /* CSS Selectors */
+  /* Class Selector */
+  .recording{
+    text-align: center;
+    margin-left: 300px;
+  }
+  .highlight {
+    background-color: #ffff99; /* Highlight color for personalities */
+  }
+  
+  /* ID Selector */
+  #section1 {
+    margin-top: 30px; /* Add margin to top of section 1 */
+  }
+  
+  /* Universal Selector */
+  * {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  /* Element Selector */
+  header {
+    border-bottom: 2px solid #ccc; /* Bottom border for header */
+  }
+  
+  /* Combinators */
+  /* Descendant Combinator */
+  header nav ul li {
+    display: grid; /* Display navigation items inline */
+  }
+  
+  /* Child Combinator */
+  main > section {
+    padding: 20px 60px 20px 20px;
+  }
+  
+  /* General sibling combinator */
+  section ~ hr {
+    margin-top: 30px; /* Add margin above horizontal rules */
+  }
+  
+  /* Adjacent sibling combinator */
+  h3 + ol {
+    margin-top: 15px; /* Add margin above ordered lists following h3 */
+  }
+  
+  /* Combining Two Selectors */
+  p.thanks{
+    text-align: center;
+    font-family: "Bitter", serif;
+    font-weight: 500;
+  }
+  #section1 > h3 {
+    text-align: left;
+  }
+  h3 > b {
+    color: #cc3300; /* Dark orange color for strong tags within h3 */
+  }
+  
+  /* New Selectors */
+  /* :has() Selector */
+  section:has(details) {
+    margin-bottom: 40px; /* Add margin below sections with details elements */
+    padding-bottom: 40px;
+    padding-left: 50px;
+  }
+  
+  /* Nested Selectors */
+  details {
+    padding-left: 20px; /* Indent ordered lists within details */
+    ol{
+        padding-left: 10px;
+        color: #7e6e69;
+    }
+  }
+  
