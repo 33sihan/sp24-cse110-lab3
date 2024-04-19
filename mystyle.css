@@ -86,7 +86,7 @@ body {
   }
   /* Attribute selector*/
   a[href="video.mp4"], a[href="audio.m4a"] {
-    color: #007bff; /* Blue color for links */
+    color: color-mix(in srgb, #3251ed 90%, yellow);
   }
   /* Pseudo-class */
   a:hover {
